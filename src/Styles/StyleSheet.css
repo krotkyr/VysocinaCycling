@@ -1,0 +1,174 @@
+.userLoggedOn {
+    display: none;
+}
+
+.modryodkaz
+{
+    font-size: 12px;
+    color: #003399;
+    font-family: sans-serif;
+}
+
+.cena {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.clasictext {
+    font-size: 12px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.clanek
+{
+    border: thin solid #d4ccb0;
+    padding: 0px 15px 15px 15px;
+    font-size: 12px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.rozbalovaciclanek
+{
+    border: thin solid #d4ccb0;
+    padding: 0px 15px 10px 15px;
+    font-size: 12px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.partneri
+{
+    border: thin solid #d4ccb0;
+    padding: 5px 15px 15px 15px;
+    font-size: 12px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.zavody
+{
+    border: thin solid #d4ccb0;
+    padding: 15px;
+    font-size: 12px;
+    text-align: left;
+    font-family: sans-serif;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.nabidka
+{
+    text-align: justify;
+    width: 300px;
+}
+
+.textnovinky
+{
+    text-align: justify;
+    font-size: 12px;
+}
+
+.infoclanek
+{
+    font-size: 10px;
+    text-align: right;
+    font-family: sans-serif;
+    font-style: italic;
+    color: #CC3300;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.textclanku
+{
+    display: none;
+}
+
+.hidetext
+{
+    padding: 5px 0px 0px 0px;
+    color: #0000FF;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+}
+
+.showtext
+{
+    padding: 5px 0px 0px 0px;
+    color: #0000FF;
+    font-size: 12px;
+    font-style: italic;
+}
+
+#pageContent 
+{
+    display: none;
+}
+
+#paticka
+{
+    background-color: #f5f3e5;
+    border: thin solid #d4ccb0;
+    padding: 0px 15px 15px 15px;
+    font-size: 12px;
+    text-align: justify;
+    font-family: sans-serif;
+    width: 968px;
+}
+
+.nadpish1
+{
+    font-size: medium;
+}
+
+.nadpish2
+{
+    font-size: small;
+}
+
+ul.paging1, ul.paging2, ul.paging3, ul.paging4, ul.paging5, ul.paging6, ul.paging7, ul.paging8, ul.paging9, ul.paging10, ul.paging11, ul.paging12, ul.paging13
+{
+    clear: both;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.paging1 li, ul.paging2 li, ul.paging3 li, ul.paging4 li, ul.paging5 li, ul.paging6 li, ul.paging7 li, ul.paging8 li, ul.paging9 li, ul.paging10 li, ul.paging11 li, ul.paging12 li, ul.paging13 li
+{
+    display: block;
+    padding-bottom: 4px;
+}
+
+ul.simplePagerNav li
+{
+    display: block;
+    padding: 2px;
+    margin-bottom: 5px;
+    font-family: georgia;
+    font-size: 18px;
+    float: left;
+    position: relative;
+    left: 46%;
+}
+
+ul.simplePagerNav li a
+{
+    color: #333333;
+    text-decoration: none;
+}
+
+li.currentPage
+{
+    background: #459e00;	
+}
+
+ul.simplePagerNav li.currentPage a
+{
+    color: #FFFFFF;
+}
