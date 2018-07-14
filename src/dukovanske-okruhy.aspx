@@ -83,6 +83,27 @@
             </tr>
         </table>
     </div>
+    <div id="dialogSendPozvanka" style="display: none">
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <asp:Label runat="server" AssociatedControlID="TextBoxSubject">Nadpis:&nbsp;</asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="TextBoxSubject" runat="server" TextMode="SingleLine" Style="width: 440px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label runat="server" AssociatedControlID="TextBoxBody">Text:&nbsp;</asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="TextBoxBody" runat="server" TextMode="MultiLine" Style="width: 440px; height: 440px"></asp:TextBox>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div id="pageDukovanskeOkruhyContent">
         <div id="baner8" class="nivoSlider">
             <img id="img1" alt="Baner" src="images/Banery/BannerDukovanskeOkruhy2014_01a.jpg" />
@@ -152,6 +173,9 @@ email <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice
                                     <a href="http://www.pomahejpohybem.cz" title="Pomáhej pohybem" target="_blank">
                                         <img src="images/inzerce/CEZ_EPP_branding(ram)_Novinky,cz_120x600_Right2_repeat.jpg" alt="CEZ EPP" border="none" />
                                     </a>
+                                </div>
+                                <div class="userRoleEditor">
+                                    <input id="buttonPozvanka" type="button" runat="server" title="Pozvánka" value="Odeslat emaily" />
                                 </div>
                             </td>
                         </tr>

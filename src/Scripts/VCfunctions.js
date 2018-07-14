@@ -880,6 +880,12 @@ function SiteDukovanskeOkruhyReady() {
         });
     });
 
+    $("#buttonPozvanka").button();
+    $("#buttonPozvanka").click(function () {
+        $('#dialogSendPozvanka').dialog({ title: "Pozvánka registrovaným závodníkům" });
+        $('#dialogSendPozvanka').dialog("open");
+    })
+
     $("#buttonSilnicniZavodSmazForm").button();
     $("#buttonSilnicniZavodSmazForm").click(function () {
         $("#TextBoxSilnicniZavodJmeno").val('');
@@ -1046,6 +1052,52 @@ function SiteDukovanskeOkruhyReady() {
             }
         ]
     });
+
+    $("#dialogSendPozvanka").dialog(
+            {
+                buttons:
+                [
+                    {
+                        text: "Odeslat",
+                        click: function () {
+                            $("body").css("cursor", "wait");
+
+                            var subject = $("#TextBoxSubject").val();
+                            var body = $("#TextBoxBody").val();
+
+                            $.ajax({
+                                type: "POST",
+                                url: "Services/WebService.asmx/SendPozvanka",
+                                data: "{'subject':'" + subject + "', 'body':'" + body + "'}",
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    $("body").css("cursor", "default");
+                                    alert(result.d);
+                                },
+                                error: function (result) {
+                                    $("body").css("cursor", "default");
+                                    alert(result.status + ' ' + result.statusText);
+                                }
+                            });
+
+                            $(this).dialog("close");
+                        }
+                    },
+
+                    {
+                        text: "Zrušit",
+                        click: function () { $(this).dialog("close"); }
+                    }
+                ],
+                show: "blind",
+                hide: "explode",
+                height: 600,
+                width: 536,
+                position: "center",
+                resizable: false,
+                autoOpen: false
+            });
 }
 
 function SiteProdejReady() {

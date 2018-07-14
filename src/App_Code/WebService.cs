@@ -46,6 +46,25 @@ public class WebService : System.Web.Services.WebService
     {
         MailMessage msg = new MailMessage();
         msg.From = new MailAddress(emailadressFrom);
+        msg.To.Add(new MailAddress(emailadressTo));
+        msg.Subject = subject;
+        msg.Body = body;
+        SmtpClient smtp = new SmtpClient();
+        try
+        {
+            smtp.Send(msg);
+            return null;
+        }
+        catch (Exception ex2)
+        {
+            return "Chyba pøi odesílání emailu na adresu " + emailadressTo + ". Chyba: " + ex2.Message;
+        }
+    }
+
+    private string SendPotvrzeniEmail(string subject, string body, string emailadressFrom, string emailadressTo)
+    {
+        MailMessage msg = new MailMessage();
+        msg.From = new MailAddress(emailadressFrom);
         msg.To.Add(new MailAddress(emailadressFrom));
         msg.To.Add(new MailAddress(emailadressTo));
         msg.Subject = subject;
@@ -547,7 +566,7 @@ public class WebService : System.Web.Services.WebService
                     }
                     string subject = "Žádost o registraci";
                     string body = "Jméno: " + fname + '\n' + "Pøíjmení: " + sname + '\n' + "Uživatelské jméno: " + uzivjmeno + '\n' + "Heslo: " + heslo + '\n' + "Email: " + emailadress + '\n' + "Lokalita: " + obec + '\n' + "Kraj: " + kraj + '\n' + "Datum narození: " + narozeni + '\n' + "Úroveò: " + uroven + '\n' + "Typ èlenství: " + clen + '\n' + "Preferovaná disciplína: " + disciplina + '\n' + "Zobrazované poèasí pro: " + pocasi;
-                    return chyba + SendEmail(subject, body, "info@vysocinacycling.cz", emailadress);
+                    return chyba + SendPotvrzeniEmail(subject, body, "info@vysocinacycling.cz", emailadress);
                 }
                 else
                     return "Chyba pøi vytvoøení uživatele: " + status;
@@ -590,7 +609,7 @@ public class WebService : System.Web.Services.WebService
                     }
                     string subject = "Úprava registraèních údajù";
                     string body = "Uživatelské jméno: " + LoggedUser.UserName + '\n' + "Heslo: " + heslo + '\n' + "Email: " + emailadress + '\n' + "Lokalita: " + obec + '\n' + "Kraj: " + kraj + '\n' + "Úroveò: " + uroven + '\n' + "Typ èlenství: " + clen + '\n' + "Preferovaná disciplína: " + disciplina + '\n' + "Zobrazované poèasí pro: " + pocasi;
-                    return chyba + SendEmail(subject, body, "info@vysocinacycling.cz", emailadress);
+                    return chyba + SendPotvrzeniEmail(subject, body, "info@vysocinacycling.cz", emailadress);
                 }
                 else
                     return "Chybné heslo.";
@@ -1091,7 +1110,7 @@ public class WebService : System.Web.Services.WebService
                 {
                     string subject = "Zrušení registrace èlena " + jmeno;
                     string body = "Uživatelské jméno: " + user + '\n' + '\n' + "Email: " + emailadress;
-                    return "Uživatel byl smazán." + SendEmail(subject, body, "info@vysocinacycling.cz", emailadress);
+                    return "Uživatel byl smazán." + SendPotvrzeniEmail(subject, body, "info@vysocinacycling.cz", emailadress);
                 }
                 else
                     return "Uživatele se nepodaøilo smazat.";
@@ -1108,7 +1127,7 @@ public class WebService : System.Web.Services.WebService
         if ((emailadress != "") && (jmeno != "") && (obdobi != "") && (uroven != "") && (typzadosti != ""))
         {
             string body = "Jméno: " + jmeno + '\n' + "Období: " + obdobi + '\n' + "Úroveò: " + uroven + '\n' + "Email: " + emailadress;
-            return SendEmail(typzadosti, body, "info@vysocinacycling.cz", emailadress);
+            return SendPotvrzeniEmail(typzadosti, body, "info@vysocinacycling.cz", emailadress);
         }
         else
             return "Nebyla vyplnìna všechna pole.";
@@ -1120,7 +1139,7 @@ public class WebService : System.Web.Services.WebService
         if ((emailadress != "") && (jmeno != "") && (uroven != "") && (typ != "") && (datumod != "") && (datumdo != "") && (typzadosti != ""))
         {
             string body = "Jméno: " + jmeno + '\n' + "Úroveò: " + uroven + '\n' + "Mám zájem o: " + typ + '\n' + "Od: " + datumod + '\n' + "Do: " + datumdo + '\n' + "Poznámka: " + pozn + '\n' + "Email: " + emailadress;
-            return SendEmail(typzadosti, body, "info@vysocinacycling.cz", emailadress);
+            return SendPotvrzeniEmail(typzadosti, body, "info@vysocinacycling.cz", emailadress);
         }
         else
             return "Nebyla vyplnìna všechna pole.";
@@ -1132,7 +1151,7 @@ public class WebService : System.Web.Services.WebService
         if ((jmeno != "") && (prijmeni != "") && (narozeni != "") && (kategorie != "") && (adresa != "") && (emailadress != "") && (typzadosti != ""))
         {
             string body = "Jméno: " + jmeno + '\n' + "Pøíjmení: " + prijmeni + '\n' + "Datum narození: " + narozeni + '\n' + "Kategorie: " + kategorie + '\n' + "Klub: " + klub + '\n' + "Èíslo licence: " + licence + '\n' + "Adresa: " + adresa + '\n' + "Email: " + emailadress + '\n' + "Telefon: " + telefon;
-            return SendEmail(typzadosti, body, "mtb@vysocinacycling.cz", emailadress);
+            return SendPotvrzeniEmail(typzadosti, body, "mtb@vysocinacycling.cz", emailadress);
         }
         else
             return "Nebyla vyplnìna všechna pole.";
@@ -1147,7 +1166,7 @@ public class WebService : System.Web.Services.WebService
             string res = SaveSilnicniZavodReqistration(jmeno, prijmeni, narozeni, kategorie, klub, licence, mesto, emailadress, telefon, skola, popis);
             if (!neposlatemail)
             {
-                return res + '\n' + SendEmail(typzadosti, body, "silnice@vysocinacycling.cz", emailadress);
+                return res + '\n' + SendPotvrzeniEmail(typzadosti, body, "silnice@vysocinacycling.cz", emailadress);
             } else
             {
                 return res;
@@ -1155,6 +1174,40 @@ public class WebService : System.Web.Services.WebService
         }
         else
             return "Nebyla vyplnìna všechna poviná pole.";
+    }
+
+    [WebMethod]
+    public string SendPozvanka(string subject, string body)
+    {
+        string result = "";
+        try
+        {
+            using (HostingEnvironment.Impersonate())
+            using (SqlConnection db = this.OpenDatabase())
+            using (SqlCommand cmd = new SqlCommand("SELECT DISTINCT EMAIL FROM RaceCompetitors", db))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    int sendItems = 0;
+                    int allItems = 0;
+                    while (reader.Read())
+                    {
+                        string email = (string)reader["EMAIL"];
+                        string send = SendEmail(subject, body, "silnice@vysocinacycling.cz", email);
+                        if (send != null)
+                        {
+                            result += send + "\n";
+                        } else
+                        {
+                            sendItems++;
+                        }
+                        allItems++;
+                    }
+                    return result + "\n Odesláno emailù: " + sendItems.ToString() + " z " + allItems.ToString();
+                }
+            }
+        }
+        catch { throw; }
     }
 
     private int GetRaceCategoryId(string categoryName)
