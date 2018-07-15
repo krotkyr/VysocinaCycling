@@ -144,9 +144,8 @@
                                 <div style="font-size: small; font-weight: bold; font-style: italic; color: #666666; text-align: justify; padding-right: 20px;">
 Tım Vysoèina Cycling bude i tento rok poøádat silnièní závod v okolí Jaderné elektrárny Dukovany, kterı
 se pyšní ji dlouholetou tradicí. Opìt bychom chtìli nabídnout všem startujícím zajímavou tra a pokusit se pøitáhnout
-na start závodníky všech vıkonnostních kategorií vèetnì mládee a také elitních muù. Termín závodu zùstavá stejnı jako v loòském
-roce. Do budoucna bychom ho chtìli stabilizovat tak, aby si získal pevné místo v kalendáøi silnièních závodù v Èeské republice
-a nekolidoval s dalšími podobnımi akcemi.<br />
+na start závodníky všech vıkonnostních kategorií vèetnì mládee a také elitních muù. Termín závodu jsme s organizaèních
+dùvodù pøesunuli na léto. Doufáme e naláká více potenciálních zájemcù o silnièní cyklistiku v našem okolí.<br />
 Závodit se bude na stejném okruhu jako v loòském roce. Zùstane i monost vıbìru délky trati pro hobby kategorie.
 Okruh je zvlnìnı a kopcovitı, nechybí lesní pasáe, ani otovøená místa na vìtru. Celı okruh vede po kvaliních silnicích.
 V prùbìhu závodu budou moci závodníci spatøi dominantu jaderné elektrárny ze všech jejich stran. Souèasnì je tra
