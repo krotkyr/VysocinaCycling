@@ -907,6 +907,13 @@ function SiteDukovanskeOkruhyReady() {
         changeYear: true
     });
 
+    $("#TextBoxFinishTime").datetimepicker({
+        timeFormat: 'HH:mm:ss',
+        stepHour: 1,
+        stepMinute: 1,
+        stepSecond: 1
+    });
+
     $("#dialogButtonPrezentovat").prop('disabled', true);
     $("#TextBoxStartovniCislo").change(function () {
         var pageIsValid = Page_ClientValidate('DialogPrezentovat');
@@ -916,8 +923,8 @@ function SiteDukovanskeOkruhyReady() {
     $("#dialogPrezentace").dialog(
     {
         autoOpen: false,
-        width: 250,
-        height: 210,
+        width: 300,
+        height: 280,
         modal: true,
         buttons:
         [
@@ -965,8 +972,8 @@ function SiteDukovanskeOkruhyReady() {
     $("#dialogZrusitPrezentaci").dialog(
     {
         autoOpen: false,
-        width: 250,
-        height: 150,
+        width: 300,
+        height: 200,
         modal: true,
         buttons:
         [
@@ -1009,8 +1016,8 @@ function SiteDukovanskeOkruhyReady() {
     $("#dialogFinish").dialog(
     {
         autoOpen: false,
-        width: 300,
-        height: 220,
+        width: 440,
+        height: 280,
         modal: true,
         buttons:
         [

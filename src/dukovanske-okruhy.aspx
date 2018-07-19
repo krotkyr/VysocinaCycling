@@ -16,7 +16,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <div id="dialogPrezentace" style="display: none">
+    <div id="dialogPrezentace" style="display: none; font-size: large">
         <br />
         <table>
             <tr>
@@ -24,7 +24,7 @@
                     <asp:Label runat="server" AssociatedControlID="TextBoxStartovniCislo">Startovní èíslo:&nbsp;</asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxStartovniCislo" runat="server" TextMode="SingleLine" Style="width: 50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxStartovniCislo" runat="server" TextMode="SingleLine" Style="width: 80px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -37,7 +37,7 @@
                     <asp:Label runat="server" AssociatedControlID="TextBoxStartFee">Zaplaceno:&nbsp;</asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxStartFee" runat="server" TextMode="SingleLine" Style="width: 50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxStartFee" runat="server" TextMode="SingleLine" Style="width: 80px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -48,11 +48,11 @@
         </table>
         <br />
     </div>
-    <div id="dialogZrusitPrezentaci" style="display: none">
+    <div id="dialogZrusitPrezentaci" style="display: none; font-size: large">
         <br />
         Opravdu zrušit prezentaci ?
     </div>
-    <div id="dialogFinish" style="display: none">
+    <div id="dialogFinish" style="display: none; font-size: large">
         <br />
         <table>
             <tr>
@@ -60,7 +60,7 @@
                     <asp:Label runat="server" AssociatedControlID="TextBoxFinishTime">Cílový èas:&nbsp;</asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxFinishTime" runat="server" TextMode="SingleLine" Style="width: 120px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxFinishTime" runat="server" TextMode="SingleLine" Style="width: 200px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -73,7 +73,7 @@
                     <asp:Label runat="server" AssociatedControlID="TextBoxGroupOrder">Poøadí ve stejném èase:&nbsp;</asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxGroupOrder" runat="server" TextMode="SingleLine" Style="width: 50px">1</asp:TextBox>
+                    <asp:TextBox ID="TextBoxGroupOrder" runat="server" TextMode="SingleLine" Style="width: 80px">1</asp:TextBox>
                 </td>
             </tr>
             <tr>
