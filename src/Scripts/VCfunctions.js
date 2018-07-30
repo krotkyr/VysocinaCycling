@@ -908,10 +908,10 @@ function SiteDukovanskeOkruhyReady() {
     });
 
     $("#TextBoxFinishTime").datetimepicker({
-        timeFormat: 'HH:mm:ss',
-        stepHour: 1,
-        stepMinute: 1,
-        stepSecond: 1
+        timeFormat: "HH:mm:ss",
+        hourGrid: 5,
+        minuteGrid: 10,
+        secondGrid: 10
     });
 
     $("#dialogButtonPrezentovat").prop('disabled', true);
