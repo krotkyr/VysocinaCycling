@@ -167,10 +167,45 @@ email <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice
                                 <br />
                                 <img src="images/foto/DO2018.jpg" alt="Dukovanské okruhy 2018" border="none" />
                             </td>
-                            <td valign="top"> 
+                            <td valign="top" align="center"> 
                                 <div>
                                     <a href="http://www.pomahejpohybem.cz" title="Pomáhej pohybem" target="_blank">
                                         <img src="images/inzerce/CEZ_EPP_branding(ram)_Novinky,cz_120x600_Right2_repeat.jpg" alt="CEZ EPP" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://www.nakolarce.cz/" title="Penzion Na Koláøce" target="_blank">
+                                        <img src="" alt="Na Koláøce" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://www.isostar.cz/" title="Isostar" target="_blank">
+                                        <img src="" alt="Isostar" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.tour-sport.cz/" title="Tour Sport Tøebíè" target="_blank">
+                                        <img src="" alt="Tour Sport" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://www.jemca.cz/" title="Jemèa" target="_blank">
+                                        <img src="" alt="Jemèa" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://www.centropen.cz/" title="Centropen" target="_blank">
+                                        <img src="" alt="Centropen" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.zpmvcr.cz/" title="Zdravotní pojišovna ministerstva vnitra" target="_blank">
+                                        <img src="" alt="211" border="none" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://www.nuvia.cz/" title="Nuvia a.s." target="_blank">
+                                        <img src="" alt="Nuvia" border="none" />
                                     </a>
                                 </div>
                                 <div class="userRoleEditor">
