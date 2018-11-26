@@ -307,9 +307,9 @@ email <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice
                     <br />
                     <table width="540px">
                         <tr>
-                            <td align="left">
+                            <%--<td align="left">
                                 <input id="buttonSilnicniZavod" type="button" runat="server" title="Dukovanské okruhy 2018" value="Odeslat pøihlášku" />
-                            </td>
+                            </td>--%>
                             <td align="right">
                                 <input id="buttonSilnicniZavodSmazForm" type="button" runat="server" title="Dukovanské okruhy 2018" value="Smazat formuláø" />
                             </td>

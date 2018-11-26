@@ -44,14 +44,14 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
                             idRegistrationResult = (int)reader["ID_RACE_REGISTRATION_RESULT"];
                             break;
                         }
-                        if (idRegistrationResult == 0)
-                        {
-                            buttonSilnicniZavod.Value = "Odeslat přihlášku";
-                        }
-                        else
-                        {
-                            buttonSilnicniZavod.Value = "Odeslat upravenou přihlášku";
-                        }
+                        //if (idRegistrationResult == 0)
+                        //{
+                        //    buttonSilnicniZavod.Value = "Odeslat přihlášku";
+                        //}
+                        //else
+                        //{
+                        //    buttonSilnicniZavod.Value = "Odeslat upravenou přihlášku";
+                        //}
 
                     }
                 }
