@@ -809,6 +809,102 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
+    public string SetStartTime(int type)
+    {
+        return "";
+    }
+
+    [WebMethod]
+    public string GetStartTable()
+    {
+        string category = "";
+        string registrationstable = "";
+        try
+        {
+            using (HostingEnvironment.Impersonate())
+            using (SqlConnection db = this.OpenDatabase())
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.START_TIME, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 3 ORDER BY rr.START_TIME ASC, rr.START_NUMBER ASC", db))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    int registered = 0;
+                    int prezented = 0;
+                    while (reader.Read())
+                    {
+                        if (reader["CATEGORY"].ToString() != category)
+                        {
+                            if (category != "")
+                            {
+                                registrationstable += "</table>";
+                                registrationstable += "<br />";
+                                registrationstable += "Pøihlášeno / Prezentováno ( " + registered.ToString() + " / " + prezented.ToString() + " )";
+                                registrationstable += "<br />";
+                                registrationstable += "</div>";
+                                registrationstable += "<br />";
+                            }
+                            registrationstable += "<div id=\"i" + reader["CODE"] + "\">";
+                            registrationstable += "<table><tr><td width=\"720px\"><h3>" + reader["CATEGORY"] + " - " + reader["RACE"] + "</h3></td>";
+                            registrationstable += "<td class='notPrintable'><input id=\"registered" + reader["CODE"] + "\" type=\"button\" runat=\"server\" value=\"Tisk registrovaných\" class=\"printCategoryRegistered userRoleEditor\" style=\"height:30px; width:100px; font-size:8px; padding:1px; display:none;\" /></td>";
+                            registrationstable += "<td class='notPrintable'><input id=\"presented" + reader["CODE"] + "\" type=\"button\" runat=\"server\" value=\"Tisk prezentovaných\" class=\"printCategoryPresented userRoleEditor\" style=\"height:30px; width:100px; font-size:8px; padding:1px; display:none;\" /></td></tr></table>";
+                            registrationstable += "<table>";
+                            registrationstable += "<tr style='font-weight: bold; font-style: italic; font-size: small;'>";
+                            registrationstable += "<td width='40px'>St.è.</td>";
+                            registrationstable += "<td width='80px'>Jméno</td>";
+                            registrationstable += "<td width='80px'>Pøíjmení</td>";
+                            registrationstable += "<td width='60px'>Roèník</td>";
+                            registrationstable += "<td width='180px'>Tým</td>";
+                            registrationstable += "<td width='220px' class='notPrintable'>Mìsto (Kraj)</td>";
+                            registrationstable += "<td width='100px' class='notPrintable'>Stav</td>";
+                            registrationstable += "<td width='20px' class='notPrintable'></td>";
+                            registrationstable += "<td width='20px' class='notPrintable'></td>";
+                            registrationstable += "<td width='20px' class='notPrintable'></td>";
+                            registrationstable += "</tr>";
+                            registered = 0;
+                            prezented = 0;
+                        }
+                        registered++;
+                        if ((bool)reader["PRESENTED"])
+                        {
+                            prezented++;
+                            registrationstable += "<tr>";
+                        }
+                        else
+                        {
+                            registrationstable += "<tr class='notPresented'>";
+                        }
+                        registrationstable += "<td>" + ((reader["START_NUMBER"] == null) ? "" : reader["START_NUMBER"].ToString()) + "</td>";
+                        registrationstable += "<td>" + reader["FIRST_NAME"] + "</td>";
+                        registrationstable += "<td>" + reader["LAST_NAME"] + "</td>";
+                        registrationstable += "<td>" + ((DateTime)reader["BIRTH_DATE"]).Year.ToString() + "</td>";
+                        if (reader["TEAM"] == null || reader["TEAM"].ToString() == "")
+                        {
+                            registrationstable += "<td>" + reader["ADDRESS"] + "</td>";
+                        }
+                        else
+                        {
+                            registrationstable += "<td>" + reader["TEAM"] + "</td>";
+                        }
+                        registrationstable += "<td class='notPrintable'>" + reader["ADDRESS"] + "</td>";
+                        registrationstable += "<td class='notPrintable'" + ((bool)reader["PRESENTED"] ? (reader["FINISH_TIME"].ToString() == "" ? (" style=\"color:#008000\">Presentován") : (" style=\"color:#0066CC\">V cíli")) : (((DateTime)reader["REGISTRATION_END"] > (DateTime)reader["REGISTRATION_DATE"]) ? (">Pøihlášen") : (" style=\"color:#FF3300\">Po termínu"))) + "</td>";
+                        registrationstable += "<td class='notPrintable'><input id=\"regOk" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"OK\" class=\"regOk userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
+                        registrationstable += "<td class='notPrintable'><input id=\"regNok" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"NOK\" class=\"regNok userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
+                        registrationstable += "<td class='notPrintable'><input id=\"finish" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"Finish\" class=\"regFinish userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
+                        registrationstable += "</tr>";
+                        category = reader["CATEGORY"].ToString();
+                    }
+                    registrationstable += "</table>";
+                    registrationstable += "<br />";
+                    registrationstable += "Pøihlášeno / Prezentováno ( " + registered.ToString() + " / " + prezented.ToString() + " )";
+                    registrationstable += "<br />";
+                    registrationstable += "</div>";
+                }
+            }
+        }
+        catch { throw; }
+        return registrationstable;
+    }
+
+    [WebMethod]
     public string GetFinishTable()
     {
         string category = "";
@@ -896,7 +992,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("UPDATE RaceRegistrationResults SET PRESENTED = 1, START_NUMBER = @StartNumber, START_FEE = @StartFee WHERE ID_RACE_REGISTRATION_RESULT = @IdRegistrace", db))
+            using (SqlCommand cmd = new SqlCommand("UPDATE RaceRegistrationResults SET PRESENTED = 1, START_NUMBER = @StartNumber, START_FEE = @StartFee, START_TIME = (SELECT TOP(1) r.START_TIME FROM RaceRegistrationResults rr JOIN RaceCategory rc on rr.ID_RACE_CATEGORY = rc.ID_RACE_CATEGORY JOIN Races r on rc.ID_RACE = r.ID_RACE where rr.ID_RACE_REGISTRATION_RESULT = @IdRegistrace) WHERE ID_RACE_REGISTRATION_RESULT = @IdRegistrace", db))
             {
                 cmd.Parameters.Add("@IdRegistrace", SqlDbType.Int).Value = idregistrace;
                 cmd.Parameters.Add("@StartNumber", SqlDbType.Int).Value = startNumber;
