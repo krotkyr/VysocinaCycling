@@ -166,8 +166,8 @@
                                         <div class="userRoleEditor" style="position: absolute; top: 925px;">
                                             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit"
                                                 Text="Edit" />
-                                            &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="false" CommandName="Delete"
-                                                Text="Delete" />
+                                            <%--&nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="false" CommandName="Delete"
+                                                Text="Delete" />--%>
                                             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New"
                                                 Text="New" />
                                         </div>
