@@ -698,7 +698,7 @@
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">21.7.2018</td>
+                                            <td style="color: #FF3300;">20.7.2019</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
@@ -740,7 +740,7 @@
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">Záøí 2018 </td>
+                                            <td style="color: #FF3300;">Záøí 2019 </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>

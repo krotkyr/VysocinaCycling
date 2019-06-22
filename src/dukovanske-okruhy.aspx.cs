@@ -31,7 +31,7 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT FROM RaceRegistrationResults rr, RaceCompetitors rc, RaceCategory c, Races r, RaceActions a WHERE rr.ID_RACE_CATEGORY = c.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND r.ID_RACE_ACTION = a.ID_RACE_ACTION AND rc.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND rc.FIRST_NAME = @FirstName AND rc.LAST_NAME = @LastName AND rc.BIRTH_DATE = @BirthDate", connection))
+                using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT FROM RaceRegistrationResults rr, RaceCompetitors rc, RaceCategory c, Races r, RaceActions a WHERE rr.ID_RACE_CATEGORY = c.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND r.ID_RACE_ACTION = a.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 AND rc.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND rc.FIRST_NAME = @FirstName AND rc.LAST_NAME = @LastName AND rc.BIRTH_DATE = @BirthDate", connection))
                 {
                     cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 50).Value = TextBoxSilnicniZavodJmeno.Text;
                     cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 50).Value = TextBoxSilnicniZavodPrijmeni.Text;
@@ -44,14 +44,14 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
                             idRegistrationResult = (int)reader["ID_RACE_REGISTRATION_RESULT"];
                             break;
                         }
-                        //if (idRegistrationResult == 0)
-                        //{
-                        //    buttonSilnicniZavod.Value = "Odeslat přihlášku";
-                        //}
-                        //else
-                        //{
-                        //    buttonSilnicniZavod.Value = "Odeslat upravenou přihlášku";
-                        //}
+                        if (idRegistrationResult == 0)
+                        {
+                            buttonSilnicniZavod.Value = "Odeslat přihlášku";
+                        }
+                        else
+                        {
+                            buttonSilnicniZavod.Value = "Odeslat upravenou přihlášku";
+                        }
 
                     }
                 }
