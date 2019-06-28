@@ -142,26 +142,30 @@
                         <tr>
                             <td align="center" valign="top">
                                 <div style="font-size: small; font-weight: bold; font-style: italic; color: #666666; text-align: justify; padding-right: 20px;">
-Tım Vysoèina Cycling bude i tento rok poøádat silnièní závod v okolí Jaderné elektrárny Dukovany, kterı
-se pyšní ji dlouholetou tradicí. Opìt bychom chtìli nabídnout všem startujícím zajímavou tra a pokusit se pøitáhnout
-na start závodníky všech vıkonnostních kategorií vèetnì mládee a také elitních muù. Termín závodu jsme s organizaèních
-dùvodù pøesunuli na léto. Doufáme e naláká více potenciálních zájemcù o silnièní cyklistiku v našem okolí.<br />
-Závodit se bude na stejném okruhu jako v loòském roce. Zùstane i monost vıbìru délky trati pro hobby kategorie.
-Okruh je zvlnìnı a kopcovitı, nechybí lesní pasáe, ani otovøená místa na vìtru. Celı okruh vede po kvaliních silnicích.
-V prùbìhu závodu budou moci závodníci spatøi dominantu jaderné elektrárny ze všech jejich stran. Souèasnì je tra
-provede zajímavımi místy v okolí Dalešické pøehrady. Pøed cílem na závodníky èeká krátké stoupání, které udìlá závìr
-závodu atraktivnìjší.<br />
-Závod je vypsán pro všechny vìkové kategeorie všech vıkonností. Startovat se bude ve vlnách.
-V pøípadì menšího mnoství závodníkù ve startovní vlnì, mohou bıt startovní vlny spojeny. Nejdøíve odstartují
-licencovaní závodníci, po té kategorie hobby a mláde. Závodníci muskıch kategorií, kteøí budou chtít bojovat
-o titul Mistra kraje Vysoèina musí startovat v hlavním závodì s licencovanımi závodníky.<br />
-I tento rok budou vypsány zajímavé finanèní ceny pro prvních 7 závodníkù v cíli hlavního závodu. Pro mláde a
-hobby kategorie budou pøipraveny vìcné ceny. Pro nejlepší v kraji medaile a diplomy.<br />
-Hlavní závod je vypsán na 4 okruhy a na závìr absolvují závodníci ještì jeden malı okruh, aby diváci mohli lépe sledovat
-vyvrcholení prestiního závodu. O titul Mistra kraje Vysoèina si to rozdají nejen mui v hlavním závodì, ale i závodníci
-v mládenickıch kategoriích. Závody jsou samozøejmì otevøené pro všechny startující.<br />
-Pøihlašovat se mùete buï prostøednictvím pøihlašovacího formuláøe zde. Vìtší tımy mohou zaslat souhrnou pøihlášku na
-email <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice(zavináè)vysocinacycling.cz</a>.
+                                    V okolí Jaderné elektrárny Dukovany se i letos v èervenci uskuteèní silnièní 
+                                    cyklistickı závod, kterı kadoroènì pøiláká poèetné startovní pole všech vıkonnostních 
+                                    kategorií vèetnì mládee, hobby jezdcù, ale také elitních profesionálù.<br />
+                                    Chceme závodníkùm nabídnout opìt zajímavou tra na okruhu v okolí Jaderné elektrárny. 
+                                    Okruh je zvlnìnı a kopcovitı, nechybí lesní pasáe, ani otevøená místa na vìtru. 
+                                    Celı okruh vede po kvalitních silnicích. V prùbìhu závodu mohou závodníci spatøit 
+                                    dominantu jaderné elektrárny ze všech jejich stran. Souèasnì je tra provede 
+                                    zajímavımi místy v okolí Dalešické pøehrady a øeky Jihlavy. Pøed cílem na 
+                                    závodníky èeká krátké stoupání, které udìlá závìr závodu atraktivnìjší.<br />
+                                    Novinkou letošního roèníku, je zaøazení závodu do prestiní série RoadCup a s tím 
+                                    související úpravy rozdìlení kategorií pro hobby závodníky. Do série RoadCup je 
+                                    zaøazena tra o délce 110 km (tøi okruhy) a je vypsána pro všechny vìkové kategorie 
+                                    hooby. Hobby závodníci však mají stále monost startovat i v lehèí variantì 
+                                    na 74 km (2 okruhy) v kategorii open.<br />
+                                    Závod je opìt vypsán i jako Mistrovství Kraje Vysoèina pro všechny vìkové kategorie 
+                                    startující na dlouhém okruhu (mui musí absolvovat hlavní závod na 153 km).<br />
+                                    Na nejlepší v hlavním závodu èekají zajímavé finanèní ceny. Pro mláde a hobby kategorie 
+                                    budou pøipraveny vìcné ceny. Pro nejlepší v kraji medaile a diplomy.<br />
+                                    Hlavním partnerem závodu je Jaderná elektrárna Dukovany, která podporuje tento tradièní
+                                    závod od jeho poèátku v roce 1995. Podìkování patøí i menším partnerù, kteøí
+                                    kadoroènì vìnují pìkné vìcné ceny.<br />
+                                    Pøihlašovat se mùete prostøednictvím pøihlašovacího formuláøe zde (karta pøihláška). 
+                                    Vìtší tımy mohou zaslat souhrnou pøihlášku na email 
+                                    <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice(zavináè)vysocinacycling.cz</a>.
                                 </div>
                                 <br />
                                 <img src="images/foto/DO2019.jpg" alt="Dukovanské okruhy 2019" border="none" />
