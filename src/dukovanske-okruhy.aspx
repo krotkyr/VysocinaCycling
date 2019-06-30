@@ -166,10 +166,11 @@
                                     Pøihlašovat se mùžete prostøednictvím pøihlašovacího formuláøe zde (karta pøihláška). 
                                     Vìtší týmy mohou zaslat souhrnou pøihlášku na email 
                                     <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice(zavináè)vysocinacycling.cz</a>.
+                                    <br />
+                                    <br />
+                                    <img src="images/foto/DO2019.jpg" alt="Dukovanské okruhy 2019" border="none" />
+                                    <br />
                                 </div>
-                                <br />
-                                <img src="images/foto/DO2019.jpg" alt="Dukovanské okruhy 2019" border="none" />
-                                <br />
                             </td>
                             <td valign="top" align="center"> 
                                 <div>
