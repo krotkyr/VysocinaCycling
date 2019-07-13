@@ -189,6 +189,11 @@
                                     </a>
                                 </div>
                                 <div>
+                                    <a href="http://www.decathlon.cz/" title="Decathlon" target="_blank">
+                                        <img src="images/inzerce/decathlon.png" alt="Decathlon" border="none" />
+                                    </a>
+                                </div>
+                                <div>
                                     <a href="https://www.tour-sport.cz/" title="Tour Sport Tøebíè" target="_blank">
                                         <img src="images/inzerce/toursport-sm.png" alt="Tour Sport" border="none" />
                                     </a>

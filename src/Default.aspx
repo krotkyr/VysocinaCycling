@@ -646,8 +646,8 @@
                             </li>
                             <li>
                                 <div class="clanek" style="padding-left: 30px; padding-bottom: 0px;">
-                                    <img src="images/inzerce/sponzori.gif"
-                                        alt="Partneøi Vysoèina Cycling 2013" border="none" />
+                                    <img src="images/inzerce/sponzori2019.gif"
+                                        alt="Partneøi Vysoèina Cycling 2019" border="none" />
                                 </div>
                             </li>
                             <li>
