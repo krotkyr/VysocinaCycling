@@ -1028,7 +1028,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("SELECT cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.START_FEE, rr.FINISH_TIME, rr.GROUP_ORDER, rr.REGISTRATION_DATE, a.REGISTRATION_END FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND r.ID_RACE_ACTION = a.ID_RACE_ACTION AND rr.ID_RACE_REGISTRATION_RESULT = @IdRegistrace", db))
+            using (SqlCommand cmd = new SqlCommand("SELECT cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.START_FEE, rr.DISCOUNTED_FEE, rr.FINISH_TIME, rr.GROUP_ORDER, rr.REGISTRATION_DATE, a.REGISTRATION_END FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND r.ID_RACE_ACTION = a.ID_RACE_ACTION AND rr.ID_RACE_REGISTRATION_RESULT = @IdRegistrace", db))
             {
                 cmd.Parameters.Add("@IdRegistrace", SqlDbType.Int).Value = idregistrace;
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -1038,7 +1038,11 @@ public class WebService : System.Web.Services.WebService
                         int startFee = (int) reader["START_FEE"];
                         DateTime finishTime = reader["FINISH_TIME"].ToString() == "" ? DateTime.Now : (DateTime) reader["FINISH_TIME"];
                         int groupOrder = reader["GROUP_ORDER"].ToString() == "" ? 1 : (int) reader["GROUP_ORDER"];
-                        if (((DateTime) reader["REGISTRATION_DATE"]) > ((DateTime) reader["REGISTRATION_END"]))
+                        if (reader["DISCOUNTED_FEE"].ToString() != "")
+                        {
+                            startFee = (int) reader["DISCOUNTED_FEE"];
+                        }
+                        else if (((DateTime) reader["REGISTRATION_DATE"]) > ((DateTime) reader["REGISTRATION_END"]))
                         {
                             startFee += 50;
                         }
