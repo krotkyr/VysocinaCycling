@@ -214,6 +214,11 @@
                                     </a>
                                 </div>
                                 <div>
+                                    <a href="https://www.zajezdy.cz/" title="Zájezdy CZ" target="_blank">
+                                        <img src="images/inzerce/cz-zajezdy.png" alt="211" border="none" />
+                                    </a>
+                                </div>
+                                <div>
                                     <a href="http://www.centropen.cz/" title="Centropen" target="_blank">
                                         <img src="images/inzerce/centropen.png" alt="Centropen" border="none" />
                                     </a>
