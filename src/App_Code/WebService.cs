@@ -730,7 +730,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 ORDER BY c.AGE_FROM DESC, c.AGE_TO ASC, c.NAME DESC, rr.START_NUMBER ASC, rr.REGISTRATION_DATE ASC", db))
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 ORDER BY c.ID_RACE_CATEGORY ASC, c.NAME DESC, rr.START_NUMBER ASC, rr.REGISTRATION_DATE ASC", db))
             {
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -913,7 +913,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, (rr.FINISH_TIME - rr.START_TIME) as RACE_TIME FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 AND rr.FINISH_TIME is not null ORDER BY c.AGE_FROM DESC, c.AGE_TO ASC, RACE_TIME ASC, rr.GROUP_ORDER ASC", db))
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, (rr.FINISH_TIME - rr.START_TIME) as RACE_TIME FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 AND rr.FINISH_TIME is not null ORDER BY c.ID_RACE_CATEGORY ASC, RACE_TIME ASC, rr.GROUP_ORDER ASC", db))
             {
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
