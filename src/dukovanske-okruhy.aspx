@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:RangeValidator ID="TextBoxStartFeeValidator" Type="Integer" MinimumValue="0" MaximumValue="350" runat="server" ControlToValidate="TextBoxStartFee" ValidationGroup="DialogPrezentovat" ErrorMessage="Zadejte èíslo od 0 do 350." ForeColor="Red"></asp:RangeValidator>
+                    <asp:RangeValidator ID="TextBoxStartFeeValidator" Type="Integer" MinimumValue="0" MaximumValue="400" runat="server" ControlToValidate="TextBoxStartFee" ValidationGroup="DialogPrezentovat" ErrorMessage="Zadejte èíslo od 0 do 400." ForeColor="Red"></asp:RangeValidator>
                 </td>
             </tr>
         </table>
