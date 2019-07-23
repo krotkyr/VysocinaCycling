@@ -3,16 +3,20 @@ using System.Web.UI.WebControls;
 using System.Configuration.Provider;
 using System.Data;
 using System.Data.SqlClient;
+using VysocinaCycling;
 
 public partial class DukovanskeOkruhy : System.Web.UI.Page
 {
-    string connectionString;
+    private string connectionString;
+    private AppService appService;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         System.Configuration.ConnectionStringSettings ConnectionStringSettings = System.Configuration.ConfigurationManager.ConnectionStrings["VysocinaCycling"];
         if (ConnectionStringSettings == null || ConnectionStringSettings.ConnectionString.Trim() == "") throw new ProviderException("Connection string cannot be blank.");
         this.connectionString = ConnectionStringSettings.ConnectionString;
+
+        this.appService = new AppService();
     }
 
     protected void TextBoxSilnicniZavodNarozeni_TextChanged(object sender, EventArgs e)
@@ -59,5 +63,18 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
             }
         }
         catch { throw; }
+    }
+
+    protected void DropDownListRaceActions_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        historyFinishTable.InnerHtml = appService.GetFinishTable(int.Parse((sender as DropDownList).SelectedItem.Value));
+    }
+
+    protected void DropDownListRaceActions_DataBound(object sender, EventArgs e)
+    {
+        if ((sender as DropDownList).SelectedIndex >= 0)
+        {
+            historyFinishTable.InnerHtml = appService.GetFinishTable(int.Parse((sender as DropDownList).SelectedItem.Value));
+        }
     }
 }
