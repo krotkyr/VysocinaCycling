@@ -113,6 +113,8 @@
                 <asp:QueryStringParameter DefaultValue="0" Name="Age" QueryStringField="Age" Type="int16" />
             </SelectParameters>
         </asp:SQLDataSource>
+        <asp:SQLDataSource ID="SQLDataSourceRaceActions" runat="server" SelectCommand="SELECT ID_RACE_ACTION, NAME FROM RaceActions ORDER BY ID_RACE_ACTION ASC" ConnectionString="<%$ ConnectionStrings:VysocinaCycling %>" ProviderName="<%$ ConnectionStrings:VysocinaCycling.ProviderName %>">
+        </asp:SQLDataSource>
         <div id="dukovanskeokruhytabs">
             <ul>
                 <li id="Li81"><a href="#tab-81">O závodu</a></li>
@@ -347,13 +349,13 @@
                         <table>  
                             <tr>
                                 <td>
-                                    <h2 style="text-align: center; color: #0066CC">Poslední roèníky</h2>
+                                    <h2 style="text-align: left; color: #0066CC">Poslední roèníky</h2>
                                 </td>
                                 <td>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #0066CC; font-weight: bold; padding-top: 5px">Roèník 2017:
+                                <td style="color: #0066CC; font-weight: bold;">Roèník 2015:
                                 </td>
                                 <td>
                                 </td>
@@ -361,29 +363,29 @@
                             <tr>
                                 <td style="color: #0033CC; font-weight: bold;">Pøihlášení závodníci:
                                 </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/RegistraceDO2017.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Pøihlášky Dukovanské okruhy 2016');" target="_blank">RegistraceDO2017.pdf</a>
+                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-prihlasky.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Pøihlášky Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-prihlasky.pdf</a>
                                 </td>
-                            </tr> 
+                            </tr>
                             <tr>
                                 <td style="color: #0033CC; font-weight: bold;">Startovní listina:
                                 </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/PrezenceDO2017.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Startovní listina Dukovanské okruhy 2016');" target="_blank">PrezenceDO2017.pdf</a>
+                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-startovka.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Startovní listina Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-startovka.pdf</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="color: #0033CC; font-weight: bold;">Výsledky:
                                 </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/VysledkyDO2017.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Výsledky Dukovanské okruhy 2016');" target="_blank">VysledkyDO2017.pdf</a>
+                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-vysledky.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Výsledky Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-vysledky.pdf</a>
                                 </td>
-                            </tr>     
+                            </tr>   
                             <tr>
                                 <td style="color: #0033CC; font-weight: bold;">Èlánek:
                                 </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/Default.aspx?NewsId=192">Dukovanské okruhy 2017 ovládl Václav Nežerka</a>
+                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/Default.aspx?NewsId=167">David Dvorský vítìzem Dukovanských okruhù</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #0066CC; font-weight: bold; padding-top: 20px">Roèník 2016:
+                                <td style="color: #0066CC; font-weight: bold; padding-top: 10px">Roèník 2016:
                                 </td>
                                 <td>
                                 </td>
@@ -413,36 +415,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #0066CC; font-weight: bold; padding-top: 20px">Roèník 2015:
+                                <td style="color: #0066CC; font-weight: bold; padding-top: 20px">
+                                    <asp:Label AssociatedControlID="DropDownListRaceActions" runat="server">Roèník: </asp:Label>
+                                    <asp:DropDownList ID="DropDownListRaceActions" runat="server" OnDataBound="DropDownListRaceActions_DataBound" AutoPostBack="true" Style="width: 254px" DataSourceID="SQLDataSourceRaceActions" DataValueField="ID_RACE_ACTION" DataTextField="NAME" OnSelectedIndexChanged="DropDownListRaceActions_SelectedIndexChanged">
+                                    </asp:DropDownList>
                                 </td>
                                 <td>
                                 </td>
                             </tr>
-                            <tr>
-                                <td style="color: #0033CC; font-weight: bold;">Pøihlášení závodníci:
-                                </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-prihlasky.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Pøihlášky Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-prihlasky.pdf</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="color: #0033CC; font-weight: bold;">Startovní listina:
-                                </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-startovka.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Startovní listina Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-startovka.pdf</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="color: #0033CC; font-weight: bold;">Výsledky:
-                                </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/files/DukovanskeOkruhy2015-vysledky.pdf" onclick="ga('send', 'event', 'PDF', 'View', 'Výsledky Dukovanské okruhy 2015');" target="_blank">DukovanskeOkruhy2015-vysledky.pdf</a>
-                                </td>
-                            </tr>   
-                            <tr>
-                                <td style="color: #0033CC; font-weight: bold;">Èlánek:
-                                </td>
-                                <td style="color: #FF3300"><a href="http://www.vysocinacycling.cz/Default.aspx?NewsId=167">David Dvorský vítìzem Dukovanských okruhù</a>
-                                </td>
-                            </tr>
                         </table>
+                        <div id="historyFinishTable" runat="server"></div>
                     </div>
             </div>
         </div>
