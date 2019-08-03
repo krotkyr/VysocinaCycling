@@ -375,6 +375,21 @@
                                 <li>
                                     <div class="partneri">
                                         <p>
+                                            <a href="http://www.tour-sport.cz/" target="_blank">
+                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo-toursport.png"
+                                                    alt="Tour Sport" border="none" /></a>
+                                        </p>
+                                        <h2 class="nadpish2">TOUR SPORT</h2>
+                                        Naše spoleènost se zabývá prodejem veškerého sportovního vybavení. V prvních letech
+                                        našeho obchodování jsme se zajímali o maloobchodní prodej sportovní obuvi a vybavení
+                                        pro turisty.Až o pár let pozdìji jsme se rozhodli zaèít nabízet k prodeji jízdní kola
+                                        a lyže a celý náš sortiment nadále rozšiøovat.
+                                        <br />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="partneri">
+                                        <p>
                                             <a href="http://www.kalas.cz/" target="_blank">
                                                 <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/kalas.png"
                                                     alt="KALAS" border="none" /></a>
@@ -385,130 +400,32 @@
                                         Pøipojte se k nim. Sportovní obleèení KALAS je synonymem pro nepøekonatelné funkèní
                                         vlastnosti, špièkové zpracování, nápaditý design i dlouhou životnost.<br />
                                     </div>
-                                </li>     
+                                </li>
                                 <li>
                                     <div class="partneri">
                                         <p>
-                                            <a href="http://www.rattler.cz/cs/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/rattler.png"
-                                                    alt="RATTLER" border="none" /></a>
+                                            <a href="http://www.decathlon.cz/" target="_blank">
+                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/decathlon-p.png"
+                                                    alt="DECATHLON" border="none" /></a>
                                         </p>
-                                        <h2 class="nadpish2">RATTLER</h2>
-                                        Provozujeme specializovaný maloobchodní a velkoobchodní e-shop s cyklistickým zbožím.
-                                        Jsme výhradní dovozce a distributor øady svìtových cyklistických znaèek pro Èeskou
-                                        republiku a Slovensko. Online prodej cyklistického obleèení NUCKILY a SOOMOM, brašen
-                                        ROSWHEEL, svítilen FEREI, øazení microSHIFT, klik DRIVELINE a dalšího zboží.<br />
+                                        <h2 class="nadpish2">DECATHLON</h2>
+                                        Jsme tým nadšených sportovcù. Naším smyslem je dìlat sport dostupnìjší.
+                                        Milujeme sport, dìláme do co nás baví.
+                                        Máme odvahu. Jsme Decathlon United.<br />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="partneri">
                                         <p>
-                                            <a href="https://www.mann-hummel.com/mfcz/index.html/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/mannfilter.png"
-                                                    alt="MANN-FILTER" border="none" /></a>
+                                            <a href="http://www.isostar.cz/" target="_blank">
+                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/isostar.png"
+                                                    alt="ISOSTAR" border="none" /></a>
                                         </p>
-                                        <h2 class="nadpish2">MANN-FILTER</h2>
-                                        MANN-FILTER je obchodní znaèkou spoleènosti MANN+HUMMEL, partnera a dodavatele komponentù
-                                        a originálních dílù (OE) pro automobilový a strojní prùmysl. Produkty spoleènosti
-                                        MANN+HUMMEL jsou vyrobeny na základì nejvyšší kvality. To platí také pro dodávky
-                                        originálních dílù (OE) dodávaných do automobilek a dílù pro náhradní spotøebu se
-                                        znaèkou MANN-FILTER.<br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.cyklosvec.cz/catlike/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo_catlike-orange.png"
-                                                    alt="Catlike" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">Catlike</h2>
-                                        Catlike je španìlský výrobce špièkových cyklistických pøileb a brýlí, které používají
-                                        závodníci i na Tour de France, Giru,Vueltì a MS. Vrcholem v nabídce znaèky je model
-                                        Whisper, který je v nabídce firmy s každoroèními inovacemi již ètyøi roky. Mohli
-                                        jste jej spatøit na hlavách dvou olympijských vítìzù 2008 (Julien Absalon a Samuel
-                                        Sánchez) , Thor Hushovd /mistr svìta 2010 na silnici/ i mistrynì svìta v XC 2008
-                                        (Marga Fullana). V Catlike pøilbách letos bude závodit nový silnièní profiteam Movistar,
-                                        ale i èeské týmy.
-                                        <br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.inkospor.cz/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo-inkospor.png"
-                                                    alt="Inkospor" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">Inkospor</h2>
-                                        Prémiová kvalita pro vaše zdraví a ještì lepší výkon! Ne vždy je kvalita tam, kde
-                                        je to na výrobku napsáno. Podobnì jako skvìlý kuchaø nemùže ze špatných surovin
-                                        pøipravit dobré jídlo, tak ani špatný kuchaø z dobrých surovin nepøichystá lahodný
-                                        pokrm. Pro výrobky prémiové kvality je rozhodující správné složení, èistota ingrediencí
-                                        a pøísnì kontrolované výrobní postupy. A pøesnì to vám nabízí sportovní výživa INKOSPOR
-                                        ve svých produktových øadách ACTIVE a X-TREME. Sportovní výživa INKOSPOR se vyznaèuje
-                                        pøedevším následujícími vlastnostmi: Produkty se vyrábí podle nejnovìjších sportovnì-vìdeckých
-                                        poznatkù z tìch nejlepších surovin a prochází øadou odborných testù a analýz. Produkty
-                                        podléhají pøísné permanentní kontrole jakosti, jež zaruèuje jejich nejvyšší kvalitu
-                                        a bezpeènost. Nemìcká znaèka INKOSPOR disponuje vlastním výzkumem, vývojem a produkcí
-                                        na nejvyšší evropské úrovni. Všechny produkty se mohou pochlubit mimoøádnì vytøíbenou,
-                                        lahodnou chutí. Znaèka INKOSPOR zaruèuje maximální úroveò bezpeènosti svých výrobkù.
-                                        Každý se mùže snadno pøesvìdèit, že heslo "prémiová kvalita" pro nás v žádném pøípadì
-                                        není jen prázdným pojmem.
-                                        <br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.moose.eu/cz/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo_moose.png"
-                                                    alt="MOOSE" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">MOOSE</h2>
-                                        Nejzákladnìjší filosofií znaèky MOOSE je nabídnout svým zákazníkùm technicky i materiálovì
-                                        propracované výrobky za pøijatelnou cenu. MOOSE pøevádí poznatky z vrcholového sportu
-                                        do každodenního života, a proto mezi našimi partnery a zákazníky najdete nejen špièkové
-                                        profesionály, ale tøeba i Vaše známé a pøátele.
-                                        <br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.twinsport.cz/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo-twinsport.png"
-                                                    alt="TWINSPORT" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">TWINSPORT</h2>
-                                        Jsme na trhu od roku 1997. Specializujeme se na jízdní kola, lyžování a snowboarding.
-                                        Provádíme servis jízdních kol a lyží. Na prodejnì v Tøebíèi prodáváme zboží renomovaných
-                                        znaèek jako jsou SPECIALIZED, ELAN, SUPERIOR, SCOTT, FELT, GHOST, CITY BIKES aj.
-                                        Nechceme Vám prodat kolo, které doruèí pøepravní služba a tím to pro nás skonèí.
-                                        Snad každé dobré zboží si zaslouží trochu té prodejní kultury. Trochu si o vybraném
-                                        zboží a o daném sportu popovídat, vyzkoušet si zboží, mít z nákupu pøirozenou radost.
-                                        Vybrané zboží si mùžete otestovat i formou zapùjèení.
-                                        <br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.tour-sport.cz/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo-toursport.png"
-                                                    alt="Tour Sport" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">TOUR SPORT</h2>
-                                        Naše spoleènost se zabývá prodejem veškerého sportovního vybavení. V prvních letech
-                                        našeho obchodování jsme se zajímali o maloobchodní prodej sportovní obuvi a vybavení
-                                        pro turisty.Až o pár let pozdìji jsme se rozhodli zaèít nabízet k prodeji jízdní kola
-                                        a lyže a celý náš sortiment nadále rozšiøovat. V dnešní dobì již nabízíme prodej kol znaèek
-                                        Pells, Superior, Haibike, Mondraker, CTM, Norco. Ve vybavení pro lyžaøe se specializujeme
-                                        na znaèky Blizzard, Atomic, Salomon, Rossignoll.Ve snowboardingu ve sportu plného radikálních
-                                        zmìn prodáváme znaèky Bataleon, Burton a pro zaèáteèníky prkna znaèek Stuf, Tempish.Pro pohyb
-                                        je dùležité také správné obleèení, abychom se mohli oddávat našim radovánkám za každého poèasí
-                                        a již nìkolik let spolupracujeme na té nejvyšší úrovni se znaèkou Nordblanc, Protest, Burton.
-                                        <br />
+                                        <h2 class="nadpish2">ISOSTAR</h2>
+                                        Isostar je naprostým evropským leaderem v oblasti sportovní výživy. Na èeském trhu 
+                                        má stabilní pozici již 40 let, pøední èeští sportovci v èele s extraligovým hokejovým 
+                                        týmem mají ke znaèce dlouhodobì dùvìru. Dobrá distribuce produktù v supermarketech, 
+                                        drogeriích, sportovních obchodech atd. je èiní snadno dostupným i pro širokou veøejnost.<br />
                                     </div>
                                 </li>
                                 <li>
@@ -542,19 +459,6 @@
                                 <li>
                                     <div class="partneri">
                                         <p>
-                                            <a href="http://www.s1w.cz/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/logo-speedweaponry.png"
-                                                    alt="SPEEDweaponry" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">SPEEDweaponry</h2>
-                                        Prodáváme pouze jednièky, druhá místa nás nezajímají. BMC, ZIPP, CycleOps, Compex,
-                                        POWERbreathe, Speedplay.
-                                        <br />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
                                             <a href="http://www.i-trenink.com/" target="_blank">
                                                 <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/i-trenink.jpg"
                                                     alt="i-trenink" border="none" /></a>
@@ -563,20 +467,6 @@
                                         Profesionální cyklistický tréninkový software vyhodnocující pomocí unikátních analýz
                                         pøedevším data z cyklistických wattmetrù s cílem stanovit výkonnost a trénovanost
                                         daného jedince.
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="partneri">
-                                        <p>
-                                            <a href="http://www.maratony.eu/" target="_blank">
-                                                <img style="float: left; padding-right: 20px; padding-bottom: 10px;" src="images/inzerce/Cestne_Maratony.png"
-                                                    alt="Cestné Maratóny" border="none" /></a>
-                                        </p>
-                                        <h2 class="nadpish2">Cestné Maratóny</h2>
-                                        Táto stránka je vytvorená hobby cyklistami pre hobby cyklistov a je zameraná na
-                                        cestné maratóny na Slovensku a v susedných štátoch.<br />
-                                        <br />
-                                        <br />
                                     </div>
                                 </li>
                                 <li>
