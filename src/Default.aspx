@@ -620,25 +620,25 @@
                             <li>
                                 <div class="clanek">
                                     <div class="infoclanek">
-                                        Nejbližší MTB akce
+                                        Nejbližší èasovka
                                     </div>
                                     <table style="font-size: 11px;">
                                         <tr>
                                             <td colspan="2">
-                                                <h2 style="color: #006600; font-family: 'Times New Roman', Times, serif">Vysoèina Cycling MTB </h2>
+                                                <h2 style="color: #006600; font-family: 'Times New Roman', Times, serif">Èasovka na Kluèovskou horu </h2>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">Záøí 2019 </td>
+                                            <td style="color: #FF3300;">28.9.2019 </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
-                                            <td style="color: #FF3300;">Tøebíè </td>
+                                            <td style="color: #FF3300;">Støítež u Tøebíèe </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Typ závodu: </td>
-                                            <td style="color: #FF3300;">MTB cross country </td>
+                                            <td style="color: #FF3300;">Silnièní èasovka do vrchu </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Startují: </td>
@@ -647,8 +647,50 @@
                                         <tr>
                                             <td style="color: #0033CC;">Web: </td>
                                             <td style="color: #FF3300;">
-                                                <a href="http://www.vysocinacycling.cz/akce"
-                                                    target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/akce
+                                                <a href="http://www.vysocinacycling.cz/casovka-na-klucovskou-horu"
+                                                    target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/casovka-na-klucovskou-horu
+                                                </a>
+                                            </td>
+                                        </tr> 
+                                        <tr>
+                                            <td style="color: #0033CC;">Pøihláška: </td>
+                                            <td style="color: #FF3300;"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>   
+                            <li>
+                                <div class="clanek">
+                                    <div class="infoclanek">
+                                        Nejbližší MTB akce
+                                    </div>
+                                    <table style="font-size: 11px;">
+                                        <tr>
+                                            <td colspan="2">
+                                                <h2 style="color: #006600; font-family: 'Times New Roman', Times, serif">MTB Pekelný kopec </h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #0033CC;">Termín: </td>
+                                            <td style="color: #FF3300;">29.9.2019 </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #0033CC;">Místo: </td>
+                                            <td style="color: #FF3300;">Tøebíè, U kostelíèku </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #0033CC;">Typ závodu: </td>
+                                            <td style="color: #FF3300;">MTB maraton </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #0033CC;">Startují: </td>
+                                            <td style="color: #FF3300;">Všechny kategorie </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: #0033CC;">Web: </td>
+                                            <td style="color: #FF3300;">
+                                                <a href="http://www.vysocinacycling.cz/mtb-pekelny-kopec"
+                                                    target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/mtb-pekelny-kopec
                                                 </a>
                                             </td>
                                         </tr> 

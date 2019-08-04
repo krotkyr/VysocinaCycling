@@ -82,7 +82,7 @@ function SiteDefaultReady() {
     // $("#titleImageJeseniky2012 a").lightBox();
     $(".titleImageNovinky a").lightBox();
     $("#ImageText a").lightBox();
-    $("ul.paging1").quickPager({ pageSize: 7, pagerLocation: "after", prevText: "", nextText: "" });
+    $("ul.paging1").quickPager({ pageSize: 8, pagerLocation: "after", prevText: "", nextText: "" });
     $("ul.paging4").quickPager({ pageSize: 20, pagerLocation: "after", prevText: "", nextText: "" });
 
     SetWeatherData('EZXX0025', 'Jihlava', 'weather');
@@ -1105,6 +1105,14 @@ function SiteDukovanskeOkruhyReady() {
                 resizable: false,
                 autoOpen: false
             });
+}
+
+function SiteCasovkaNaKlucovskouHoruReady() {
+    $("#casovkaklucovtabs").tabs();
+}
+
+function SiteMTBPekelnyKopecReady() {
+    $("#mtbpekelnykopectabs").tabs();
 }
 
 function SiteProdejReady() {

@@ -325,7 +325,7 @@
                     <table width="540px">
                         <tr>
                             <td align="left">
-                                <input id="buttonSilnicniZavod" type="button" runat="server" title="Dukovanské okruhy 2019" value="Odeslat pøihlášku" />
+                                <!--<input id="buttonSilnicniZavod" type="button" runat="server" title="Dukovanské okruhy 2019" value="Odeslat pøihlášku" />-->
                             </td>
                             <td align="right">
                                 <input id="buttonSilnicniZavodSmazForm" type="button" runat="server" title="Dukovanské okruhy 2019" value="Smazat formuláø" />

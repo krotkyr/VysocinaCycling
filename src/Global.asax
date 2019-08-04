@@ -83,5 +83,7 @@
         routes.MapPageRoute("ProdejRoute", "prodej", "~/prodej.aspx");
         routes.MapPageRoute("DenikRoute", "denik", "~/denik.aspx");
         routes.MapPageRoute("DukovanskeOkruhyRoute", "dukovanske-okruhy", "~/dukovanske-okruhy.aspx");
+        routes.MapPageRoute("CasovkaNaKlucovskouHoruRoute", "casovka-na-klucovskou-horu", "~/casovka-na-klucovskou-horu.aspx");
+        routes.MapPageRoute("MTBPekelnyKopecRoute", "mtb-pekelny-kopec", "~/mtb-pekelny-kopec.aspx");
     }
 </script>

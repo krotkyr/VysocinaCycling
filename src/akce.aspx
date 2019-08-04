@@ -199,7 +199,6 @@
     <div id="pageAkceContent">
         <div id="baner5" class="nivoSlider">                                            
             <img id="img1" alt="Baner" src="images/Banery/BannerDukovanskeOkruhy2014_01a.jpg" />
-            <img id="img2" alt="Baner" src="images/Banery/BanerBike1.jpg" />
         </div>
         <div id="akcetabs" style="text-align: left">
             <ul>

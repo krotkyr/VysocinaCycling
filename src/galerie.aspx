@@ -16,7 +16,6 @@
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="MainContent">
     <div id="pageDefaultContent">
         <div id="baner1" class="nivoSlider">
-            <img id="img2" alt="Baner" src="images/Banery/BannerVysocina2012_20.jpg" />
             <img id="img1" alt="Baner" src="images/Banery/BannerVysocina2012_18.jpg" />
         </div>
         <div id="galerietabs" style="text-align: left">
