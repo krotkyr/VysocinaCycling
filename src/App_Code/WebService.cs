@@ -812,8 +812,33 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string SetStartTime(int type)
+    public string SetStartTime(int type, int startInterval)
     {
+        try
+        {
+            using (HostingEnvironment.Impersonate())
+            using (SqlConnection db = this.OpenDatabase())
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, r.START_TIME FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 5 ORDER BY rr.START_NUMBER ASC", db))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    int startIncrement = 0;
+                    while (reader.Read())
+                    {
+                        DateTime startTime = ((DateTime)reader["START_TIME"]).AddSeconds(startIncrement);
+                        int idRaceRegistrationResult = ((int)reader["ID_RACE_REGISTRATION_RESULT"]);
+                        using (SqlCommand updatecmd = new SqlCommand("UPADTE RaceRegistrationResults SET START_TIME = @StartTime WHERE ID_RACE_REGISTRATION_RESULT = @IdRaceRegistrationResult", db))
+                        {
+                            updatecmd.Parameters.Add("@StartTime", SqlDbType.DateTime).Value = startTime;
+                            updatecmd.Parameters.Add("@IdRaceRegistrationResult", SqlDbType.Int).Value = idRaceRegistrationResult;
+                            int rowCount = updatecmd.ExecuteNonQuery();
+                        }
+                        startIncrement += startInterval;
+                    }
+                }
+            }
+        }
+        catch { throw; }
         return "";
     }
 

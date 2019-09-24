@@ -667,12 +667,12 @@
                                     <table style="font-size: 11px;">
                                         <tr>
                                             <td colspan="2">
-                                                <h2 style="color: #006600; font-family: 'Times New Roman', Times, serif">MTB Pekelný kopec </h2>
+                                                <h2 style="color: #006600; font-family: 'Times New Roman', Times, serif">MTB Pekelný kopce </h2>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">29.9.2019 </td>
+                                            <td style="color: #FF3300;">19.10.2019 </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
@@ -689,8 +689,8 @@
                                         <tr>
                                             <td style="color: #0033CC;">Web: </td>
                                             <td style="color: #FF3300;">
-                                                <a href="http://www.vysocinacycling.cz/mtb-pekelny-kopec"
-                                                    target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/mtb-pekelny-kopec
+                                                <a href="http://www.vysocinacycling.cz/mtb-pekelny-kopce"
+                                                    target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/mtb-pekelny-kopce
                                                 </a>
                                             </td>
                                         </tr> 

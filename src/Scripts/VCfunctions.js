@@ -1111,8 +1111,8 @@ function SiteCasovkaNaKlucovskouHoruReady() {
     $("#casovkaklucovtabs").tabs();
 }
 
-function SiteMTBPekelnyKopecReady() {
-    $("#mtbpekelnykopectabs").tabs();
+function SiteMTBPekelnyKopceReady() {
+    $("#mtbpekelnykopcetabs").tabs();
 }
 
 function SiteProdejReady() {
