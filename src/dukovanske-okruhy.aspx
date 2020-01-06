@@ -108,7 +108,7 @@
         <div id="baner8" class="nivoSlider">
             <img id="img1" alt="Baner" src="images/Banery/BannerDukovanskeOkruhy2014_01a.jpg" />
         </div>
-        <asp:SQLDataSource ID="SQLDataSourceRaceCategory" runat="server" SelectCommand="SELECT rc.NAME FROM RaceCategory rc, Races r WHERE rc.ID_RACE = r.ID_RACE and r.ID_RACE_ACTION = 5 and rc.AGE_TO <= @Age AND rc.AGE_FROM >= @Age ORDER BY rc.AGE_TO DESC, rc.NAME ASC" ConnectionString="<%$ ConnectionStrings:VysocinaCycling %>" ProviderName="<%$ ConnectionStrings:VysocinaCycling.ProviderName %>">
+        <asp:SQLDataSource ID="SQLDataSourceRaceCategory" runat="server" SelectCommand="SELECT rc.NAME FROM RaceCategory rc, Races r WHERE rc.ID_RACE = r.ID_RACE and r.ID_RACE_ACTION = 6 and rc.AGE_TO <= @Age AND rc.AGE_FROM >= @Age ORDER BY rc.ID_RACE_CATEGORY" ConnectionString="<%$ ConnectionStrings:VysocinaCycling %>" ProviderName="<%$ ConnectionStrings:VysocinaCycling.ProviderName %>">
             <SelectParameters>
                 <asp:QueryStringParameter DefaultValue="0" Name="Age" QueryStringField="Age" Type="int16" />
             </SelectParameters>
@@ -130,9 +130,9 @@
                     <table>
                         <tr>
                             <td>
-                                <h1 style="text-align: center; color: #0066CC">Dukovanské okruhy 2019</h1>
+                                <h1 style="text-align: center; color: #0066CC">Dukovanské okruhy 2020</h1>
                                 <h2 style="text-align: center; color: #0066CC">
-                                    Termín: 20.7.2019
+                                    Termín: 18.7.2020
                                 </h2>
                                 <h2 style="text-align: center; color: #0066CC">
                                     Otevøené Mistrovství kraje Vysoèina v silnièním závodì jednotlivcù
@@ -170,7 +170,7 @@
                                     <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice(zavináè)vysocinacycling.cz</a>.
                                     <br />
                                     <br />
-                                    <img src="images/foto/DO2019.jpg" alt="Dukovanské okruhy 2019" border="none" />
+                                    <img src="images/foto/DO2020.jpg" alt="Dukovanské okruhy 2020" border="none" />
                                     <br />
                                 </div>
                             </td>
@@ -235,9 +235,9 @@
             </div>
             <div id="tab-82" class="clasictext">
                     <div class="clanek" >
-                        <object data="./files/Dukovanske_okruhy_2019.pdf" style="margin-top:15px" width="930" height="2580" type="application/pdf">
+                        <object data="./files/Dukovanske_okruhy_2020.pdf" style="margin-top:15px" width="930" height="2580" type="application/pdf">
                             <br />
-                            Váš prohlížeè nepodporuje zobrazení PDF. Soubor lze stáhnout na tomto odkazu <a href="files/Dukovanske_okruhy_2019.pdf" target="_blank">Dukovanske_okruhy_2019.pdf</a>
+                            Váš prohlížeè nepodporuje zobrazení PDF. Soubor lze stáhnout na tomto odkazu <a href="files/Dukovanske_okruhy_2020.pdf" target="_blank">Dukovanske_okruhy_2020.pdf</a>
                             <br />
                         </object>
                     </div>
@@ -257,7 +257,7 @@
                     </div>
             </div>
             <div id="tab-84" class="clasictext">
-                <!--<input type="button" id="buttonSilnicniZavod" value="Vyplnit pøihlášku na Dukovanské okruhy 2019" />-->
+                <!--<input type="button" id="buttonSilnicniZavod" value="Vyplnit pøihlášku na Dukovanské okruhy 2020" />-->
                 <div class="clanek">
                     <div id="silnicniZavod" style="text-align: left">
                         <h2>Vyplòte prosím registraèní údaje. Pole oznaèená * jsou povinná.</h2>
@@ -325,10 +325,10 @@
                     <table width="540px">
                         <tr>
                             <td align="left">
-                                <!--<input id="buttonSilnicniZavod" type="button" runat="server" title="Dukovanské okruhy 2019" value="Odeslat pøihlášku" />-->
+                                <input id="buttonSilnicniZavod" type="button" runat="server" title="Dukovanské okruhy 2020" value="Odeslat pøihlášku" />
                             </td>
                             <td align="right">
-                                <input id="buttonSilnicniZavodSmazForm" type="button" runat="server" title="Dukovanské okruhy 2019" value="Smazat formuláø" />
+                                <input id="buttonSilnicniZavodSmazForm" type="button" runat="server" title="Dukovanské okruhy 2020" value="Smazat formuláø" />
                             </td>
                         </tr>
                     </table>

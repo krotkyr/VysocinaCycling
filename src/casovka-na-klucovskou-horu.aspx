@@ -41,9 +41,9 @@
                     <table>
                         <tr>
                             <td>
-                                <h1 style="text-align: center; color: #0066CC">Časovka na Klučovskou horu 2019</h1>
+                                <h1 style="text-align: center; color: #0066CC">Časovka na Klučovskou horu 2020</h1>
                                 <h2 style="text-align: center; color: #0066CC">
-                                    Termín: 28.9.2019
+                                    Termín: 28.9.2020
                                 </h2>
                             </td>
                             <td>
@@ -66,7 +66,7 @@
                                     Právě nyní je ten správný čas začít se zajímat o přípravu na Tvou budoucí závodní kariéru! 
                                     <br />
                                     <br />
-                                    <img src="images/clanky/PlakatCKH2019.jpg" alt="Časovka na Klučovskou horu 2019" border="none" />
+                                    <img src="images/clanky/PlakatCKH2020.jpg" alt="Časovka na Klučovskou horu 2020" border="none" />
                                     <br />
                                 </div>
                             </td>
@@ -91,9 +91,9 @@
             </div>
             <div id="tab-92" class="clasictext">
                     <div class="clanek" >
-                        <object data="./files/Casovka_na_Klucovskou_horu_2019.pdf" style="margin-top:15px" width="930" height="2580" type="application/pdf">
+                        <object data="./files/Casovka_na_Klucovskou_horu_2020.pdf" style="margin-top:15px" width="930" height="2580" type="application/pdf">
                             <br />
-                            Váš prohlížeč nepodporuje zobrazení PDF. Soubor lze stáhnout na tomto odkazu <a href="filesCasovka_na_Klucovskou_horu_2019.pdf" target="_blank">Casovka_na_Klucovskou_horu_2019.pdf</a>
+                            Váš prohlížeč nepodporuje zobrazení PDF. Soubor lze stáhnout na tomto odkazu <a href="filesCasovka_na_Klucovskou_horu_2020.pdf" target="_blank">Casovka_na_Klucovskou_horu_2020.pdf</a>
                             <br />
                         </object>
                     </div>
@@ -168,10 +168,10 @@
                     <table width="540px">
                         <tr>
                             <td align="left">
-                                <input id="buttonSilnicniCasovka" type="button" runat="server" title="Časovka na Klučovskou horu 2019" value="Odeslat přihlášku" />
+                                <input id="buttonSilnicniCasovka" type="button" runat="server" title="Časovka na Klučovskou horu 2020" value="Odeslat přihlášku" />
                             </td>
                             <td align="right">
-                                <input id="buttonSilnicniCasovkaSmazForm" type="button" runat="server" title="Časovka na Klučovskou horu 2019" value="Smazat formulář" />
+                                <input id="buttonSilnicniCasovkaSmazForm" type="button" runat="server" title="Časovka na Klučovskou horu 2020" value="Smazat formulář" />
                             </td>
                         </tr>
                     </table>

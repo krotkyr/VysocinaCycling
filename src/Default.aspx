@@ -588,7 +588,7 @@
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">20.7.2019</td>
+                                            <td style="color: #FF3300;">18.7.2020</td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
@@ -630,7 +630,7 @@
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">28.9.2019 </td>
+                                            <td style="color: #FF3300;">28.9.2020 </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
@@ -672,7 +672,7 @@
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Termín: </td>
-                                            <td style="color: #FF3300;">19.10.2019 </td>
+                                            <td style="color: #FF3300;">2020 </td>
                                         </tr>
                                         <tr>
                                             <td style="color: #0033CC;">Místo: </td>
