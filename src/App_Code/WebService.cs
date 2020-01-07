@@ -71,7 +71,7 @@ public class WebService : System.Web.Services.WebService
         msg.To.Add(new MailAddress(emailadressFrom));
         msg.To.Add(new MailAddress(emailadressTo));
         msg.Subject = subject;
-        msg.Body = "Tento email byl zaslán jako kontrola Vámi uvedených údajù." + '\n' + '\n' + body + '\n' + '\n' + "Dìkujeme." + '\n' + "Vysoèina cycling";
+        msg.Body = "Tento email byl zaslán jako kontrola Vámi uvedených údajù." + '\n' + '\n' + body + '\n' + '\n' + "Dìkujeme." + '\n' + "Vysoèina Cycling";
         SmtpClient smtp = new SmtpClient();
         try
         {
@@ -733,7 +733,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 6 ORDER BY c.ID_RACE_CATEGORY ASC, c.NAME DESC, rr.START_NUMBER ASC, rr.REGISTRATION_DATE ASC", db))
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE, rr.DISCOUNTED_FEE  FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 6 ORDER BY c.ID_RACE_CATEGORY ASC, c.NAME DESC, rr.START_NUMBER ASC, rr.REGISTRATION_DATE ASC", db))
             {
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -792,7 +792,7 @@ public class WebService : System.Web.Services.WebService
                             registrationstable += "<td>" + reader["TEAM"] + "</td>";
                         }
                         registrationstable += "<td class='notPrintable'>" + reader["ADDRESS"] + "</td>";
-                        registrationstable += "<td class='notPrintable'" + ((bool)reader["PRESENTED"] ? (reader["FINISH_TIME"].ToString() == "" ? (" style=\"color:#008000\">Presentován") : (" style=\"color:#0066CC\">V cíli")) : (((DateTime)reader["REGISTRATION_END"] > (DateTime)reader["REGISTRATION_DATE"]) ? (">Pøihlášen") : (" style=\"color:#FF3300\">Po termínu"))) + "</td>";
+                        registrationstable += "<td class='notPrintable'" + ((bool)reader["PRESENTED"] ? (reader["FINISH_TIME"].ToString() == "" ? (" style=\"color:#008000\">Presentován") : (" style=\"color:#0066CC\">V cíli")) : (((DateTime)reader["REGISTRATION_END"] > (DateTime)reader["REGISTRATION_DATE"]) ? (reader["DISCOUNTED_FEE"].ToString() == "" ? ">Pøihlášen" : ">Zaplaceno") : (" style=\"color:#FF3300\">Po termínu"))) + "</td>";
                         registrationstable += "<td class='notPrintable'><input id=\"regOk" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"OK\" class=\"regOk userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
                         registrationstable += "<td class='notPrintable'><input id=\"regNok" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"NOK\" class=\"regNok userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
                         registrationstable += "<td class='notPrintable'><input id=\"finish" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"Finish\" class=\"regFinish userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
@@ -851,7 +851,7 @@ public class WebService : System.Web.Services.WebService
         {
             using (HostingEnvironment.Impersonate())
             using (SqlConnection db = this.OpenDatabase())
-            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.START_TIME, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 6 ORDER BY rr.START_TIME ASC, rr.START_NUMBER ASC", db))
+            using (SqlCommand cmd = new SqlCommand("SELECT rr.ID_RACE_REGISTRATION_RESULT, rr.START_NUMBER, rr.PRESENTED, rr.START_TIME, rr.FINISH_TIME, cm.FIRST_NAME, cm.LAST_NAME, cm.BIRTH_DATE, c.CODE, c.NAME as CATEGORY, r.NAME as RACE, rr.TEAM, cm.ADDRESS, a.REGISTRATION_END, rr.REGISTRATION_DATE, rr.DISCOUNTED_FEE FROM RaceRegistrationResults rr, RaceCompetitors cm, RaceCategory c, Races r, RaceActions a WHERE cm.ID_RACE_COMPETITOR = rr.ID_RACE_COMPETITOR AND c.ID_RACE_CATEGORY = rr.ID_RACE_CATEGORY AND c.ID_RACE = r.ID_RACE AND a.ID_RACE_ACTION = r.ID_RACE_ACTION AND a.ID_RACE_ACTION = 6 ORDER BY rr.START_TIME ASC, rr.START_NUMBER ASC", db))
             {
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -913,7 +913,7 @@ public class WebService : System.Web.Services.WebService
                             registrationstable += "<td>" + reader["TEAM"] + "</td>";
                         }
                         registrationstable += "<td class='notPrintable'>" + reader["ADDRESS"] + "</td>";
-                        registrationstable += "<td class='notPrintable'" + ((bool)reader["PRESENTED"] ? (reader["FINISH_TIME"].ToString() == "" ? (" style=\"color:#008000\">Presentován") : (" style=\"color:#0066CC\">V cíli")) : (((DateTime)reader["REGISTRATION_END"] > (DateTime)reader["REGISTRATION_DATE"]) ? (">Pøihlášen") : (" style=\"color:#FF3300\">Po termínu"))) + "</td>";
+                        registrationstable += "<td class='notPrintable'" + ((bool)reader["PRESENTED"] ? (reader["FINISH_TIME"].ToString() == "" ? (" style=\"color:#008000\">Presentován") : (" style=\"color:#0066CC\">V cíli")) : (((DateTime)reader["REGISTRATION_END"] > (DateTime)reader["REGISTRATION_DATE"]) ? (reader["DISCOUNTED_FEE"].ToString() == "" ? ">Pøihlášen" : ">Zaplaceno") : (" style=\"color:#FF3300\">Po termínu"))) + "</td>";
                         registrationstable += "<td class='notPrintable'><input id=\"regOk" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"OK\" class=\"regOk userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
                         registrationstable += "<td class='notPrintable'><input id=\"regNok" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"NOK\" class=\"regNok userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
                         registrationstable += "<td class='notPrintable'><input id=\"finish" + reader["ID_RACE_REGISTRATION_RESULT"] + "\" type=\"button\" runat=\"server\" value=\"Finish\" class=\"regFinish userRoleEditor\" style=\"height:30px; width:30px; font-size:8px; padding:1px; display:none;\" /></td>";
@@ -1211,11 +1211,20 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string SendSilnicniZavodEmail(string jmeno, string prijmeni, string narozeni, string kategorie, string klub, string licence, string mesto, string emailadress, string telefon, string skola, string popis, string typzadosti, bool neposlatemail)
+    public string SendSilnicniZavodEmail(string jmeno, string prijmeni, string narozeni, string kategorie, string klub, string licence, string mesto, int platba, int fee, string emailadress, string telefon, string skola, string popis, string typzadosti, bool neposlatemail)
     {
         if ((jmeno != "") && (prijmeni != "") && (narozeni != "") && (kategorie != "") && (mesto != "") && (emailadress != "") && (typzadosti != ""))
         {
-            string body = "Jméno: " + jmeno + '\n' + "Pøíjmení: " + prijmeni + '\n' + "Datum narození: " + narozeni + '\n' + "Kategorie: " + kategorie + '\n' + "Klub: " + klub + '\n' + "Èíslo a kód licence: " + licence + '\n' + "Mìsto: " + mesto + '\n' + "Email: " + emailadress + '\n' + "Telefon: " + telefon;
+            string startFee = fee.ToString() + " Kè";
+            if (platba == 2 && fee > 300)
+            {
+                startFee = (fee - 50).ToString() + " Kè";
+            }
+            string body = "Jméno: " + jmeno + '\n' + "Pøíjmení: " + prijmeni + '\n' + "Datum narození: " + narozeni + '\n' + "Kategorie: " + kategorie + '\n' + "Klub: " + klub + '\n' + "Èíslo a kód licence: " + licence + '\n' + "Mìsto: " + mesto + '\n' + "Platba: " + ((platba == 1) ? "V kanceláøi závodu" : "Pøevodem na úèet") + '\n' + "Startovné: " + startFee + '\n' + "Email: " + emailadress + '\n' + "Telefon: " + telefon;
+            if (platba == 2)
+            {
+                body = body + '\n' + '\n' + "Platbu prosím zašlete na úèet 2500260342/2010 nejpozdìji do 30.6.2020." + '\n' + "Do poznámky uveïte text Dukovanské okruhy 2020 a jméno závodníka, za kterého platíte." + '\n' + "Jako variabilní simbol uveïte datum narození závodníka ve formátu 'ddmmrrrr'." + '\n' + "Jakmile bude platba ovìøena zobrazí se ve startovní listinì u závodníka stav Zaplaceno.";
+            }
             string res = SaveSilnicniZavodReqistration(jmeno, prijmeni, narozeni, kategorie, klub, licence, mesto, emailadress, telefon, skola, popis);
             if (!neposlatemail)
             {

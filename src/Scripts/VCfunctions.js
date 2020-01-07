@@ -848,7 +848,9 @@ function SiteDukovanskeOkruhyReady() {
         var jmeno = $("#TextBoxSilnicniZavodJmeno").val();
         var prijmeni = $("#TextBoxSilnicniZavodPrijmeni").val();
         var narozeni = $("#TextBoxSilnicniZavodNarozeni").val();
-        var kategorie = $("#DropDownListSilnicniZavodKategorie option:selected").val();
+        var kategorie = $("#DropDownListSilnicniZavodKategorie option:selected").text();
+        var platba = $("#DropDownListPlatba option:selected").val();
+        var fee = $("#DropDownListSilnicniZavodKategorie option:selected").val();
         var klub = $("#TextBoxSilnicniZavodKlub").val();
         var licence = $("#TextBoxSilnicniZavodLicence").val();
         var mesto = $("#TextBoxSilnicniZavodAdresa").val();
@@ -860,7 +862,7 @@ function SiteDukovanskeOkruhyReady() {
         $.ajax({
             type: "POST",
             url: "Services/WebService.asmx/SendSilnicniZavodEmail",
-            data: "{'jmeno':'" + jmeno + "', 'prijmeni':'" + prijmeni + "', 'narozeni':'" + narozeni + "', 'kategorie':'" + kategorie + "', 'klub':'" + klub + "', 'licence':'" + licence + "', 'mesto':'" + mesto + "', 'emailadress':'" + emailadress + "', 'telefon':'" + telefon + "', 'skola':'" + "-" + "', 'popis':'" + "-" + "', 'typzadosti':'" + typzadosti + "', 'neposlatemail':'" + neposlatemail + "'}",
+            data: "{'jmeno':'" + jmeno + "', 'prijmeni':'" + prijmeni + "', 'narozeni':'" + narozeni + "', 'kategorie':'" + kategorie + "', 'klub':'" + klub + "', 'licence':'" + licence + "', 'mesto':'" + mesto + "', 'platba':'" + platba + "', 'fee':'" + fee + "', 'emailadress':'" + emailadress + "', 'telefon':'" + telefon + "', 'skola':'" + "-" + "', 'popis':'" + "-" + "', 'typzadosti':'" + typzadosti + "', 'neposlatemail':'" + neposlatemail + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (result) {

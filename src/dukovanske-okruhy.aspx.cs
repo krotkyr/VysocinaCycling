@@ -25,11 +25,13 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
         try
         {
             datetime = DateTime.ParseExact((sender as TextBox).Text, "d.M.yyyy", System.Globalization.CultureInfo.InvariantCulture);
-        } catch {
+        }
+        catch
+        {
             datetime = DateTime.Now;
         }
         SQLDataSourceRaceCategory.SelectParameters["Age"].DefaultValue = datetime.Year.ToString();
-        
+
         try
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -77,4 +79,5 @@ public partial class DukovanskeOkruhy : System.Web.UI.Page
             historyFinishTable.InnerHtml = appService.GetFinishTable(int.Parse((sender as DropDownList).SelectedItem.Value));
         }
     }
+
 }

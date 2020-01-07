@@ -108,7 +108,7 @@
         <div id="baner8" class="nivoSlider">
             <img id="img1" alt="Baner" src="images/Banery/BannerDukovanskeOkruhy2014_01a.jpg" />
         </div>
-        <asp:SQLDataSource ID="SQLDataSourceRaceCategory" runat="server" SelectCommand="SELECT rc.NAME FROM RaceCategory rc, Races r WHERE rc.ID_RACE = r.ID_RACE and r.ID_RACE_ACTION = 6 and rc.AGE_TO <= @Age AND rc.AGE_FROM >= @Age ORDER BY rc.ID_RACE_CATEGORY" ConnectionString="<%$ ConnectionStrings:VysocinaCycling %>" ProviderName="<%$ ConnectionStrings:VysocinaCycling.ProviderName %>">
+        <asp:SQLDataSource ID="SQLDataSourceRaceCategory" runat="server" SelectCommand="SELECT rc.NAME, rc.START_FEE FROM RaceCategory rc, Races r WHERE rc.ID_RACE = r.ID_RACE and r.ID_RACE_ACTION = 6 and rc.AGE_TO <= @Age AND rc.AGE_FROM >= @Age ORDER BY rc.ID_RACE_CATEGORY" ConnectionString="<%$ ConnectionStrings:VysocinaCycling %>" ProviderName="<%$ ConnectionStrings:VysocinaCycling.ProviderName %>">
             <SelectParameters>
                 <asp:QueryStringParameter DefaultValue="0" Name="Age" QueryStringField="Age" Type="int16" />
             </SelectParameters>
@@ -281,7 +281,7 @@
                                 </td>
                                 <td align="left">
                                     <asp:Label AssociatedControlID="DropDownListSilnicniZavodKategorie" runat="server">Kategorie: *</asp:Label>
-                                    <asp:DropDownList ID="DropDownListSilnicniZavodKategorie" runat="server" Style="width: 254px" DataSourceID="SQLDataSourceRaceCategory" DataValueField="NAME">
+                                    <asp:DropDownList ID="DropDownListSilnicniZavodKategorie" runat="server" Style="width: 254px" DataSourceID="SQLDataSourceRaceCategory" DataValueField="START_FEE" DataTextField="NAME">
                                     </asp:DropDownList>
                                 </td>
                             </tr>
@@ -291,14 +291,21 @@
                                     <asp:TextBox ID="TextBoxSilnicniZavodKlub" runat="server" TextMode="SingleLine" Style="width: 250px"></asp:TextBox>
                                 </td>
                                 <td align="left">
-                                    <asp:Label AssociatedControlID="TextBoxSilnicniZavodLicence" runat="server">Èíslo a UCI kód licence (pokud jste držitelem):</asp:Label>
+                                    <asp:Label AssociatedControlID="TextBoxSilnicniZavodLicence" runat="server">Èíslo licence (pokud jste držitelem):</asp:Label>
                                     <asp:TextBox ID="TextBoxSilnicniZavodLicence" runat="server" TextMode="SingleLine" Style="width: 250px"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
+                                <td>
                                     <asp:Label AssociatedControlID="TextBoxSilnicniZavodAdresa" runat="server">Mìsto (v závorce uveïte "Kraj Vysoèina", pokud chcete závodit o Mistra kraje Vysoèina): *</asp:Label>
-                                    <asp:TextBox ID="TextBoxSilnicniZavodAdresa" runat="server" TextMode="SingleLine" Style="width: 524px"></asp:TextBox>
+                                    <asp:TextBox ID="TextBoxSilnicniZavodAdresa" runat="server" TextMode="SingleLine" Style="width: 250px"></asp:TextBox>
+                                </td>
+                                <td align="left">
+                                    <asp:Label AssociatedControlID="DropDownListPlatba" runat="server">Platba: *</asp:Label>
+                                    <asp:DropDownList ID="DropDownListPlatba" runat="server" Style="width: 254px">
+                                        <asp:listitem text="V kanceláøi závodu" value="1"></asp:listitem>
+                                        <asp:listitem text="Pøevodem na úèet" value="2"></asp:listitem>
+                                    </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>
