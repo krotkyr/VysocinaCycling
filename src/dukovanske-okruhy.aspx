@@ -153,11 +153,11 @@
                                     dominantu jaderné elektrárny ze všech jejich stran. Souèasnì je tra provede 
                                     zajímavımi místy v okolí Dalešické pøehrady a øeky Jihlavy. Pøed cílem na 
                                     závodníky èeká krátké stoupání, které udìlá závìr závodu atraktivnìjší.<br />
-                                    Novinkou letošního roèníku, je zaøazení závodu do prestiní série RoadCup a s tím 
-                                    související úpravy rozdìlení kategorií pro hobby závodníky. Do série RoadCup je 
+                                    Závod bude i letos zaøazen do prestiní série RoadCup, do které je 
                                     zaøazena tra o délce 110 km (tøi okruhy) a je vypsána pro všechny vìkové kategorie 
                                     hooby. Hobby závodníci však mají stále monost startovat i v lehèí variantì 
-                                    na 74 km (2 okruhy) v kategorii open.<br />
+                                    na 74 km (2 okruhy) v kategorii open. Tento rok se vracíme k pùvodnímu rozdìlení kategorií,
+                                    tak jak se nám osvìdèilo v pøedchozích roènících.<br />
                                     Závod je opìt vypsán i jako Mistrovství Kraje Vysoèina pro všechny vìkové kategorie 
                                     startující na dlouhém okruhu (mui musí absolvovat hlavní závod na 153 km).<br />
                                     Na nejlepší v hlavním závodu èekají zajímavé finanèní ceny. Pro mláde a hobby kategorie 
@@ -165,8 +165,9 @@
                                     Hlavním partnerem závodu je Jaderná elektrárna Dukovany, která podporuje tento tradièní
                                     závod od jeho poèátku v roce 1995. Podìkování patøí i menším partnerù, kteøí
                                     kadoroènì vìnují pìkné vìcné ceny.<br />
-                                    Pøihlašovat se mùete prostøednictvím pøihlašovacího formuláøe zde (karta pøihláška). 
-                                    Vìtší tımy mohou zaslat souhrnou pøihlášku na email 
+                                    Pøihlásit se mùete prostøednictvím webového formuláøe zde (karta pøihláška).
+                                    Novinkou je monost zaplatit startovné pøedem na úèet.
+                                    Vìtší tımy mohou zaslat souhrnou pøihlášku i na email 
                                     <a style="color: #FF3300" href="mailto:silnice@vysocinacycling.cz">silnice(zavináè)vysocinacycling.cz</a>.
                                     <br />
                                     <br />

@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url> 
     <loc>http://www.vysocinacycling.cz/</loc>
-    <lastmod>2019-08-03</lastmod>
+    <lastmod>2020-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>http://www.vysocinacycling.cz/dukovanske-okruhy.aspx</loc>
-    <lastmod>2019-08-03</lastmod>
+    <lastmod>2020-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

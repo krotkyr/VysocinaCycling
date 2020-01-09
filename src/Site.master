@@ -161,8 +161,8 @@
                                 <asp:MenuItem NavigateUrl="~/prodej" Text="Prodej" />
                                 <asp:MenuItem NavigateUrl="~/denik" Text="Můj deník" />
                                 <asp:MenuItem NavigateUrl="~/dukovanske-okruhy" Text="Dukovanské okruhy" />
-                                <asp:MenuItem NavigateUrl="~/casovka-na-klucovskou-horu" Text="Časovka na Klučovskou horu" />
-                                <asp:MenuItem NavigateUrl="~/mtb-pekelny-kopce" Text="MTB Pekelný kopce" />
+                                <%--<asp:MenuItem NavigateUrl="~/casovka-na-klucovskou-horu" Text="Časovka na Klučovskou horu" />
+                                <asp:MenuItem NavigateUrl="~/mtb-pekelny-kopce" Text="MTB Pekelný kopce" />--%>
                             </Items>
                         </asp:Menu>
                     </div>

@@ -647,9 +647,9 @@
                                         <tr>
                                             <td style="color: #0033CC;">Web: </td>
                                             <td style="color: #FF3300;">
-                                                <a href="http://www.vysocinacycling.cz/casovka-na-klucovskou-horu"
+                                                <%--<a href="http://www.vysocinacycling.cz/casovka-na-klucovskou-horu"
                                                     target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/casovka-na-klucovskou-horu
-                                                </a>
+                                                </a>--%>
                                             </td>
                                         </tr> 
                                         <tr>
@@ -689,9 +689,9 @@
                                         <tr>
                                             <td style="color: #0033CC;">Web: </td>
                                             <td style="color: #FF3300;">
-                                                <a href="http://www.vysocinacycling.cz/mtb-pekelny-kopce"
+                                                <%--<a href="http://www.vysocinacycling.cz/mtb-pekelny-kopce"
                                                     target="_blank" style="cursor: pointer">http://www.vysocinacycling.cz/mtb-pekelny-kopce
-                                                </a>
+                                                </a>--%>
                                             </td>
                                         </tr> 
                                         <tr>
