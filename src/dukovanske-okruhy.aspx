@@ -117,15 +117,15 @@
         </asp:SQLDataSource>
         <div id="dukovanskeokruhytabs">
             <ul>
-                <li id="Li81"><a href="#tab-81">O z·vodu</a></li>
-                <li id="Li82"><a href="#tab-82">Propozice</a></li>
-                <li id="Li83"><a href="#tab-83">Traù</a></li>
-                <li id="Li84"><a href="#tab-84">P¯ihl·öka</a></li>
-                <li id="Li85"><a href="#tab-85">StartovnÌ listina</a></li>
-                <li id="Li86"><a href="#tab-86">V˝sledky</a></li>
-                <li id="Li87"><a href="#tab-87">Historie</a></li>
+                <li id="Li81"><a href="#tab-info">O z·vodu</a></li>
+                <li id="Li82"><a href="#tab-propozice">Propozice</a></li>
+                <li id="Li83"><a href="#tab-trat">Traù</a></li>
+                <li id="Li84"><a href="#tab-prihlaska">P¯ihl·öka</a></li>
+                <li id="Li85"><a href="#tab-startovka">StartovnÌ listina</a></li>
+                <li id="Li86"><a href="#tab-vysledky">V˝sledky</a></li>
+                <li id="Li87"><a href="#tab-historie">Historie</a></li>
             </ul>
-            <div id="tab-81" class="clasictext">
+            <div id="tab-info" class="clasictext">
                 <div class="clanek">
                     <table>
                         <tr>
@@ -234,7 +234,7 @@
                     </table>
                 </div>
             </div>
-            <div id="tab-82" class="clasictext">
+            <div id="tab-propozice" class="clasictext">
                     <div class="clanek" >
                         <object data="./files/Dukovanske_okruhy_2020.pdf" style="margin-top:15px" width="930" height="2580" type="application/pdf">
                             <br />
@@ -243,7 +243,7 @@
                         </object>
                     </div>
             </div>
-            <div id="tab-83" class="clasictext">
+            <div id="tab-trat" class="clasictext">
                     <div class="clanek">
                         <h2>
                             Dlouh˝ okruh
@@ -257,7 +257,7 @@
                         <img src="images/clanky/Kratky_okruh-profil.jpg" alt="Kr·tk˝ okruh - profil" border="none" />
                     </div>
             </div>
-            <div id="tab-84" class="clasictext">
+            <div id="tab-prihlaska" class="clasictext">
                 <!--<input type="button" id="buttonSilnicniZavod" value="Vyplnit p¯ihl·öku na DukovanskÈ okruhy 2020" />-->
                 <div class="clanek">
                     <div id="silnicniZavod" style="text-align: left">
@@ -342,17 +342,17 @@
                     </table>
                 </div>
             </div>
-            <div id="tab-85" class="clasictext">
+            <div id="tab-startovka" class="clasictext">
                     <div class="clanek">
                         <div id="registrationTable"></div>
                     </div>
             </div>
-            <div id="tab-86" class="clasictext">
+            <div id="tab-vysledky" class="clasictext">
                     <div class="clanek">
                         <div id="finishTable"></div>
                     </div>
             </div>
-            <div id="tab-87" class="clasictext">
+            <div id="tab-historie" class="clasictext">
                     <div class="clanek">
                         <table>  
                             <tr>
